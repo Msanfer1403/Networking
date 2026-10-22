@@ -236,7 +236,9 @@ The whole deployment is done with `vagrant up`:
 | `config/secundary.sh` | Installs BIND and configures the slave zones |
 | `config/test.sh` | Runs `/vagrant/test.sh` |
 
-![Full deployment from scratch with vagrant up](img/13-vagrant-up-all.png)
+![Full deployment from scratch with vagrant up](img/13a-vagrant-up-all.png)
+![Full deployment from scratch with vagrant up](img/13b-vagrant-up-all.png)
+![Full deployment from scratch with vagrant up](img/13c-vagrant-up-all.png)
 
 ## 10. Problems found
 
