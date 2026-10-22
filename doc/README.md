@@ -214,7 +214,7 @@ The zone files are not created on the secondary: the primary transfers them.
 sudo journalctl -u named --since "10 minutes ago"
 ```
 
-> **SCREENSHOT**: secondary server log showing the successful transfer.
+![Secondary server log with the successful zone transfer](img/11-secondary-log.png)
 
 ```bash
 dig @192.168.56.11 maximo.test SOA +norecurse
@@ -224,7 +224,7 @@ dig @192.168.56.10 maximo.test SOA +short
 dig @192.168.56.11 maximo.test SOA +short
 ```
 
-> **SCREENSHOT**: queries to the secondary and comparison of the serial number on both servers.
+![Queries to the secondary and serial comparison](img/12-secondary-dig.png)
 
 ## 9. Automated deployment with Vagrant
 
@@ -236,7 +236,7 @@ The whole deployment is done with `vagrant up`:
 | `config/secundary.sh` | Installs BIND and configures the slave zones |
 | `config/test.sh` | Runs `/vagrant/test.sh` |
 
-> **SCREENSHOT**: `vagrant destroy -f` and `vagrant up` finishing without errors.
+![Full deployment from scratch with vagrant up](img/13-vagrant-up-all.png)
 
 ## 10. Problems found
 
