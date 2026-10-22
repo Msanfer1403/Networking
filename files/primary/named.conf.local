@@ -1,0 +1,11 @@
+zone "maximo.test" {
+    type master;
+    file "/var/lib/bind/maximo.test.dns";
+    allow-transfer { 192.168.56.11; };
+};
+
+zone "56.168.192.in-addr.arpa" {
+    type master;
+    file "/var/lib/bind/maximo.test.rev";
+    allow-transfer { 192.168.56.11; };
+};
