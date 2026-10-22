@@ -69,7 +69,7 @@ Vagrant downloads the Debian image, creates the VM with the private IP
 as the last provisioner, runs `config/test.sh`, which launches the self-check
 script. The result shows the three `OK` checks and the answers to the `dig` queries:
 
-![Primary server deployment with vagrant](img/01-vagrant-up.png)
+![Primary server deployment with vagrant](doc/img/01-vagrant-up.png)
 
 ## 4. Installing BIND9
 
