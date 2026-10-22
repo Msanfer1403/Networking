@@ -1,0 +1,17 @@
+;
+; maximo.test
+;
+$TTL 86400
+@ IN SOA debian.maximo.test. admin.maximo.test. (
+        2026102201 ; Serial
+        3600       ; Refresh
+        1800       ; Retry
+        604800     ; Expire
+        86400 )    ; Negative Cache TTL
+;
+@                       IN NS    debian.maximo.test.
+@                       IN NS    debian2.maximo.test.
+debian.maximo.test.     IN A     192.168.56.10
+debian2.maximo.test.    IN A     192.168.56.11
+web.maximo.test.        IN CNAME debian.maximo.test.
+@                       IN TXT   "maximo-sf"
