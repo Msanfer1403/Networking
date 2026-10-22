@@ -58,7 +58,7 @@ Copia de seguridad antes de editar:
 sudo cp /etc/bind/named.conf.options /etc/bind/named.conf.options.backup
 ```
 
-Contenido final: ver [`files/primario/named.conf.options`](../files/primario/named.conf.options).
+Contenido final: ver [`files/primary/named.conf.options`](../files/primary/named.conf.options).
 
 Explicación de las opciones principales:
 
@@ -80,17 +80,17 @@ sudo systemctl status named
 ### 5.3 `named.conf.local`
 
 Declaración de las zonas directa e inversa como `master`.
-Ver [`files/primario/named.conf.local`](../files/primario/named.conf.local).
+Ver [`files/primary/named.conf.local`](../files/primary/named.conf.local).
 
 ### 5.4 Zona directa
 
 Fichero `/var/lib/bind/maximo.test.dns`.
-Ver [`files/primario/maximo.test.dns`](../files/primario/maximo.test.dns).
+Ver [`files/primary/maximo.test.dns`](../files/primary/maximo.test.dns).
 
 ### 5.5 Zona inversa
 
 Fichero `/var/lib/bind/maximo.test.rev`.
-Ver [`files/primario/maximo.test.rev`](../files/primario/maximo.test.rev).
+Ver [`files/primary/maximo.test.rev`](../files/primary/maximo.test.rev).
 
 ### 5.6 Comprobación de la configuración
 
@@ -175,8 +175,8 @@ En `named.conf.local` del primario se añade `allow-transfer { 192.168.56.11; };
 
 ### 8.3 Configuración del secundario
 
-- `named.conf.options`: [`files/secundario/named.conf.options`](../files/secundario/named.conf.options)
-- `named.conf.local` (zonas `slave`): [`files/secundario/named.conf.local`](../files/secundario/named.conf.local)
+- `named.conf.options`: [`files/secundary/named.conf.options`](../files/secundary/named.conf.options)
+- `named.conf.local` (zonas `slave`): [`files/secundary/named.conf.local`](../files/secundary/named.conf.local)
 
 Los ficheros de zona no se crean en el secundario: los transfiere el primario.
 
@@ -204,8 +204,8 @@ El despliegue completo se hace con `vagrant up`:
 
 | Script | Función |
 |--------|---------|
-| `config/primario.sh` | Instala BIND, copia configuración y zonas, reinicia el servicio |
-| `config/secundario.sh` | Instala BIND y configura las zonas esclavas |
+| `config/primary.sh` | Instala BIND, copia configuración y zonas, reinicia el servicio |
+| `config/secundary.sh` | Instala BIND y configura las zonas esclavas |
 | `config/test.sh` | Lanza `/vagrant/test.sh` |
 
 > **CAPTURA**: `vagrant destroy -f` y `vagrant up` terminando sin errores.

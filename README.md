@@ -37,8 +37,8 @@ porque descarga la imagen de Debian.
 Para entrar en las máquinas:
 
 ```bash
-vagrant ssh primario
-vagrant ssh secundario
+vagrant ssh primary
+vagrant ssh secundary
 ```
 
 Para probar la resolución desde dentro de una VM:
@@ -69,9 +69,9 @@ Red privada: `192.168.56.0/24` (la `.1` es el adaptador host-only del anfitrión
 | Ruta | Contenido |
 |------|-----------|
 | `Vagrantfile` | Definición de las dos VMs y su aprovisionamiento |
-| `config/` | Scripts de aprovisionamiento (`primario.sh`, `secundario.sh`, `test.sh`) |
-| `files/primario/` | Ficheros de configuración y zonas del servidor primario |
-| `files/secundario/` | Ficheros de configuración del servidor secundario |
+| `config/` | Scripts de aprovisionamiento (`primary.sh`, `secundary.sh`, `test.sh`) |
+| `files/primary/` | Ficheros de configuración y zonas del servidor primario |
+| `files/secundary/` | Ficheros de configuración del servidor secundario |
 | `test.sh` | Script de autocomprobación del servidor |
 | `doc/` | Documentación en Markdown y capturas (`doc/img/`) |
 
