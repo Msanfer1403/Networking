@@ -16,6 +16,10 @@ Networking and system infrastructure practice.
 
 [Open project](./Test-sri)
 
+### Dns Step By Step
+Automated deployment of a primary and a secondary DNS server (BIND9) on Debian 12, using Vagrant and VirtualBox.
+[Open project](./dns-step-by-step)
+
 ## Topics Covered
 
 - Network configuration and troubleshooting.
