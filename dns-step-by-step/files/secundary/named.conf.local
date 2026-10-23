@@ -1,0 +1,11 @@
+zone "maximo.test" {
+    type slave;
+    masters { 192.168.56.10; };
+    file "/var/cache/bind/maximo.test.dns";
+};
+
+zone "56.168.192.in-addr.arpa" {
+    type slave;
+    masters { 192.168.56.10; };
+    file "/var/cache/bind/maximo.test.rev";
+};
